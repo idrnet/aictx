@@ -22,12 +22,3 @@ Tesla Model 3 2021 RWD, standard wheel (no Yoke).
 | Steering | Standard wheel |
 | Range | ~350 km |
 
-## Maintenance
-
-- Regular tire rotation every 10,000 km
-- Cabin air filter replacement annually
-- Brake fluid check every 2 years
-
-## Notes
-
-_Edit this file from your laptop using any markdown editor (VS Code, Obsidian, Typora)._
