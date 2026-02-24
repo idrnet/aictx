@@ -4,3 +4,7 @@ out/
 .vercel/
 *.tsbuildinfo
 .env*.local
+
+# User convenience files (local only)
+*.lnk
+*.url

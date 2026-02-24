@@ -22,3 +22,6 @@ Tesla Model 3 2021 RWD, standard wheel (no Yoke).
 | Steering | Standard wheel |
 | Range | ~350 km |
 
+## See also
+
+- [Test 1](/test1)
