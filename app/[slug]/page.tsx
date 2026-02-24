@@ -5,13 +5,16 @@ import { MarkdownArticle } from "@/components/markdown-article"
 import { TableOfContents } from "@/components/table-of-contents"
 import Link from "next/link"
 import { ThemeSwitcher } from "@/components/theme-switcher"
+import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 
-function getContent() {
-  const filePath = path.join(process.cwd(), "content", "tesla.md")
+const contentDir = path.join(process.cwd(), "content")
+
+function getContent(slug: string) {
+  const filePath = path.join(contentDir, `${slug}.md`)
+  if (!fs.existsSync(filePath)) return null
   const raw = fs.readFileSync(filePath, "utf-8")
   const { data, content } = matter(raw)
-  // Serialize Date objects to strings (gray-matter auto-parses dates)
   const frontmatter: Record<string, string> = {}
   for (const [key, value] of Object.entries(data)) {
     frontmatter[key] = value instanceof Date ? value.toISOString().split("T")[0] : String(value)
@@ -19,18 +22,9 @@ function getContent() {
   return { frontmatter, content }
 }
 
-export function generateMetadata(): Metadata {
-  const { frontmatter } = getContent()
-  return {
-    title: `${frontmatter.title || "Tesla"} — aictx`,
-    description: frontmatter.description || "",
-  }
-}
-
 function extractHeadings(markdown: string) {
   const headings: { level: number; text: string; id: string }[] = []
-  const lines = markdown.split("\n")
-  for (const line of lines) {
+  for (const line of markdown.split("\n")) {
     const match = line.match(/^(#{2,4})\s+(.+)$/)
     if (match) {
       const level = match[1].length
@@ -45,9 +39,40 @@ function extractHeadings(markdown: string) {
   return headings
 }
 
-export default function TeslaPage() {
-  const { frontmatter, content } = getContent()
+export function generateStaticParams() {
+  if (!fs.existsSync(contentDir)) return []
+  return fs
+    .readdirSync(contentDir)
+    .filter((f) => f.endsWith(".md"))
+    .map((f) => ({ slug: f.replace(/\.md$/, "") }))
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}): Promise<Metadata> {
+  const { slug } = await params
+  const result = getContent(slug)
+  if (!result) return { title: "Not Found — aictx" }
+  return {
+    title: `${result.frontmatter.title || slug} — aictx`,
+    description: result.frontmatter.description || "",
+  }
+}
+
+export default async function ContentPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
+  const result = getContent(slug)
+  if (!result) notFound()
+
+  const { frontmatter, content } = result
   const headings = extractHeadings(content)
+  const title = frontmatter.title || slug
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -65,21 +90,18 @@ export default function TeslaPage() {
 
       <div className="mx-auto max-w-6xl px-6">
         <div className="py-6 lg:flex lg:gap-12">
-          {/* Main content */}
           <main className="min-w-0 max-w-[680px] flex-1">
-            {/* Breadcrumb */}
             <nav className="mb-4 flex items-center gap-1.5 text-xs text-muted-foreground">
               <Link href="/" className="hover:text-foreground transition-colors">
                 aictx
               </Link>
               <span>/</span>
-              <span className="text-foreground">{frontmatter.title || "Tesla"}</span>
+              <span className="text-foreground">{title}</span>
             </nav>
 
-            {/* Article header */}
             <header className="mb-8">
               <h1 className="font-serif text-3xl font-bold tracking-tight text-foreground">
-                {frontmatter.title || "Tesla"}
+                {title}
               </h1>
               {frontmatter.lastUpdated && (
                 <p className="mt-2 text-xs text-muted-foreground">
@@ -88,13 +110,11 @@ export default function TeslaPage() {
               )}
             </header>
 
-            {/* Markdown body */}
             <article className="prose-article">
               <MarkdownArticle content={content} />
             </article>
           </main>
 
-          {/* Table of contents sidebar */}
           {headings.length > 0 && (
             <aside className="hidden lg:block lg:w-56 lg:shrink-0">
               <div className="sticky top-20">
