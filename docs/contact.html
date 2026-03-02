@@ -25,38 +25,24 @@
 
     <h1>Contact</h1>
 
-    <form id="contactForm">
+    <form action="https://formsubmit.co/70726976616379406964722e6e6574" method="POST">
+        <input type="hidden" name="_subject" value="BCG Privacy / Data Request">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://idrnet.github.io/aictx/thanks">
+        <input type="text" name="_honey" style="display:none">
+
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" name="name" required>
 
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" value="Privacy / Data Request">
+        <input type="email" name="email" required>
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
+        <textarea name="message" required></textarea>
 
         <button type="submit">Send</button>
     </form>
 
     <p class="note">For GDPR data requests (access, rectification, erasure), please include your full name and the service you used.</p>
-
-    <script>
-        // Email obfuscated to prevent spider harvesting
-        var _r = [112,114,105,118,97,99,121,64,105,100,114,46,110,101,116];
-        function _d(){return _r.map(function(c){return String.fromCharCode(c)}).join('')}
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            var subject = encodeURIComponent(document.getElementById('subject').value);
-            var body = encodeURIComponent(
-                'From: ' + document.getElementById('name').value +
-                '\nEmail: ' + document.getElementById('email').value +
-                '\n\n' + document.getElementById('message').value
-            );
-            window.location.href = 'mailto:' + _d() + '?subject=' + subject + '&body=' + body;
-        });
-    </script>
 </body>
 </html>
