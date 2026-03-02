@@ -1,22 +1,22 @@
 ---
 title: Privacy Policy
-description: Privacy Policy — BuCoGroup (BCG)
+description: Privacy Policy — BCG
 lastUpdated: 2026-03-02
 noindex: true
 ---
 
 # Privacy Policy
 
-**Entity:** BuCoGroup (BCG)
+**Entity:** BCG
 **Last updated:** March 2, 2026
 
 ## 1. Introduction
 
-This Privacy Policy describes how BuCoGroup ("BCG", "we", "us") collects, uses, and protects personal data when you interact with our services, including our account information and payment initiation services that connect to banking institutions via Open Banking (PSD2) APIs.
+This Privacy Policy describes how BCG ("BCG", "we", "us") collects, uses, and protects personal data when you interact with our services, including our account information and payment initiation services that connect to banking institutions via Open Banking (PSD2) APIs.
 
 ## 2. Data Controller
 
-BuCoGroup
+BCG
 Email: acm@acmpaper.com
 
 ## 3. Data We Collect
@@ -93,5 +93,5 @@ We may update this policy from time to time. The "Last updated" date at the top 
 
 For questions about this privacy policy or your data:
 
-**BuCoGroup (BCG)**
+**BCG**
 Email: acm@acmpaper.com
