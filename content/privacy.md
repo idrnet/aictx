@@ -12,16 +12,11 @@ noindex: true
 
 ## 1. Introduction
 
-This Privacy Policy describes how BCG ("BCG", "we", "us") collects, uses, and protects personal data when you interact with our services, including our account information and payment initiation services that connect to banking institutions via Open Banking (PSD2) APIs.
+This Privacy Policy describes how BCG ("we", "us") collects, uses, and protects personal data when you interact with our services, including account information services that connect to banking institutions via Open Banking (PSD2) APIs.
 
-## 2. Data Controller
+## 2. Data We Collect
 
-BCG
-Email: acm@acmpaper.com
-
-## 3. Data We Collect
-
-### 3.1 Banking Data (via Open Banking / PSD2)
+### Banking Data (via Open Banking / PSD2)
 
 When you authorize access to your bank account, we may collect:
 
@@ -32,12 +27,12 @@ When you authorize access to your bank account, we may collect:
 
 This data is collected exclusively through regulated Open Banking APIs (PSD2) and requires your explicit consent via your bank's authentication process.
 
-### 3.2 Technical Data
+### Technical Data
 
 - IP address and browser information (for security purposes only)
 - Authentication tokens (encrypted, temporary)
 
-## 4. How We Use Your Data
+## 3. How We Use Your Data
 
 We use banking data solely for:
 
@@ -45,53 +40,33 @@ We use banking data solely for:
 - **Financial reporting:** Internal business reporting and cash flow management
 - **Payment processing:** Initiating authorized payments on your behalf
 
-We do **not**:
+We do **not** sell, share, or use your data for marketing purposes. We do not store banking credentials — authentication is handled directly by your bank.
 
-- Sell your data to third parties
-- Use your data for marketing purposes
-- Share your data with unrelated third parties
-- Store banking credentials (authentication is handled directly by your bank)
+## 4. Data Storage and Security
 
-## 5. Data Storage and Security
-
-- Banking data is processed on secured servers located in the European Union (Germany)
+- Data is processed on secured servers in the European Union
 - Authentication credentials are never stored — we use token-based access via PSD2
-- Access tokens are encrypted and have limited validity periods
+- Access tokens are encrypted with limited validity periods
 - Data is retained only as long as necessary for the stated purposes
 
-## 6. Third-Party Services
+## 5. Third-Party Services
 
-We use **Enable Banking** (enablebanking.com) as our Open Banking aggregation provider. Enable Banking is a regulated Account Information Service Provider (AISP) and Payment Initiation Service Provider (PISP). Their privacy policy is available at https://enablebanking.com/privacy-policy/.
+We use **Enable Banking** (enablebanking.com) as our Open Banking aggregation provider, a regulated AISP/PISP under PSD2.
 
-## 7. Your Rights (GDPR)
+## 6. Your Rights (GDPR)
 
-Under the General Data Protection Regulation (GDPR), you have the right to:
+You have the right to access, rectify, erase, restrict processing, port, or object to processing of your personal data. You can withdraw consent at any time.
 
-- **Access** your personal data
-- **Rectify** inaccurate data
-- **Erase** your data ("right to be forgotten")
-- **Restrict** processing of your data
-- **Data portability** — receive your data in a structured format
-- **Object** to processing
-- **Withdraw consent** at any time
+To exercise these rights, use our [contact form](/contact).
 
-To exercise these rights, contact us at acm@acmpaper.com.
+## 7. Consent and Revocation
 
-## 8. Consent and Revocation
+You can revoke banking access at any time by:
 
-Banking access requires your explicit consent via your bank's Strong Customer Authentication (SCA). You can revoke access at any time by:
-
-1. Contacting us at acm@acmpaper.com
+1. Using our [contact form](/contact)
 2. Revoking access through your bank's online banking portal
 3. Access tokens expire automatically after the consent period
 
-## 9. Changes to This Policy
+## 8. Changes
 
 We may update this policy from time to time. The "Last updated" date at the top indicates the latest revision.
-
-## 10. Contact
-
-For questions about this privacy policy or your data:
-
-**BCG**
-Email: acm@acmpaper.com
