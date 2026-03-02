@@ -21,11 +21,11 @@
     </style>
 </head>
 <body>
-    <header><a href="/">aictx</a></header>
+    <header><a href="./">aictx</a></header>
 
     <h1>Contact</h1>
 
-    <form action="https://formspree.io/f/placeholder" method="POST">
+    <form id="contactForm">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
 
@@ -33,7 +33,7 @@
         <input type="email" id="email" name="email" required>
 
         <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" value="Privacy / Data Request" required>
+        <input type="text" id="subject" name="subject" value="Privacy / Data Request">
 
         <label for="message">Message</label>
         <textarea id="message" name="message" required></textarea>
@@ -42,5 +42,21 @@
     </form>
 
     <p class="note">For GDPR data requests (access, rectification, erasure), please include your full name and the service you used.</p>
+
+    <script>
+        // Email obfuscated to prevent spider harvesting
+        var _r = [112,114,105,118,97,99,121,64,105,100,114,46,110,101,116];
+        function _d(){return _r.map(function(c){return String.fromCharCode(c)}).join('')}
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var subject = encodeURIComponent(document.getElementById('subject').value);
+            var body = encodeURIComponent(
+                'From: ' + document.getElementById('name').value +
+                '\nEmail: ' + document.getElementById('email').value +
+                '\n\n' + document.getElementById('message').value
+            );
+            window.location.href = 'mailto:' + _d() + '?subject=' + subject + '&body=' + body;
+        });
+    </script>
 </body>
 </html>
