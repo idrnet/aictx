@@ -58,6 +58,9 @@ export async function generateMetadata({
   return {
     title: `${result.frontmatter.title || slug} — aictx`,
     description: result.frontmatter.description || "",
+    ...(result.frontmatter.noindex === "true" && {
+      robots: { index: false, follow: false },
+    }),
   }
 }
 

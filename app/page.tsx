@@ -20,9 +20,7 @@ export default function Page() {
         <div className="py-4">
           <main className="max-w-[680px]">
             <article>
-              <ul className="list-disc pl-5 text-sm leading-relaxed text-foreground/90">
-                <li>Tesla Model 3 2021 RWD, standard wheel (no Yoke).</li>
-              </ul>
+              <p className="text-sm text-foreground/70">Context tools and documentation.</p>
             </article>
           </main>
         </div>

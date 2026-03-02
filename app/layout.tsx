@@ -12,7 +12,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'aictx',
-  description: 'Tesla Model 3 2021 RWD, standard wheel (no Yoke)',
+  description: 'aictx — context tools',
   icons: {
     icon: '/favicon.ico',
   },
