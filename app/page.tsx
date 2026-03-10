@@ -37,28 +37,29 @@ function extractHeadings(markdown: string) {
   return headings
 }
 
+function getAllPages() {
+  if (!fs.existsSync(contentDir)) return []
+  return fs
+    .readdirSync(contentDir)
+    .filter((f) => f.endsWith(".md") && f !== "home.md")
+    .map((f) => {
+      const raw = fs.readFileSync(path.join(contentDir, f), "utf-8")
+      const { data } = matter(raw)
+      const slug = f.replace(/\.md$/, "")
+      return {
+        slug,
+        title: data.title || slug,
+        lastUpdated: data.lastUpdated instanceof Date
+          ? data.lastUpdated.toISOString().split("T")[0]
+          : data.lastUpdated || "",
+      }
+    })
+    .sort((a, b) => a.title.localeCompare(b.title))
+}
+
 export default function Page() {
   const result = getHomeContent()
-  if (!result) {
-    return (
-      <div className="min-h-screen bg-background text-foreground">
-        <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-          <div className="mx-auto flex h-12 max-w-6xl items-center justify-between px-6">
-            <Link href="/" className="font-serif text-base font-semibold tracking-tight text-foreground">
-              aictx
-            </Link>
-            <ThemeSwitcher />
-          </div>
-        </header>
-        <div className="mx-auto max-w-6xl px-6 py-6">
-          <p className="text-muted-foreground">No home.md found in content/</p>
-        </div>
-      </div>
-    )
-  }
-
-  const { frontmatter, content } = result
-  const headings = extractHeadings(content)
+  const pages = getAllPages()
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -72,26 +73,35 @@ export default function Page() {
       </header>
 
       <div className="mx-auto max-w-6xl px-6">
-        <div className="py-6 lg:flex lg:gap-12">
-          <main className="min-w-0 max-w-[680px] flex-1">
-            {frontmatter.lastUpdated && (
-              <p className="mb-4 text-xs text-muted-foreground">
-                Last updated {frontmatter.lastUpdated}
-              </p>
+        <div className="py-6">
+          <main className="max-w-[680px]">
+            {/* Render home.md content if it exists */}
+            {result && (
+              <article className="prose-article mb-8">
+                <MarkdownArticle content={result.content} />
+              </article>
             )}
 
-            <article className="prose-article">
-              <MarkdownArticle content={content} />
-            </article>
+            {/* Auto-generated page index */}
+            <section>
+              <h2 className="font-serif text-lg font-semibold mb-3 text-foreground">All pages</h2>
+              <ul className="space-y-1.5">
+                {pages.map((p) => (
+                  <li key={p.slug} className="flex items-baseline gap-2">
+                    <Link
+                      href={`/${p.slug}`}
+                      className="text-sm text-foreground underline underline-offset-3 decoration-muted-foreground/50 hover:decoration-foreground transition-colors"
+                    >
+                      {p.title}
+                    </Link>
+                    {p.lastUpdated && (
+                      <span className="text-xs text-muted-foreground">{p.lastUpdated}</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </section>
           </main>
-
-          {headings.length > 0 && (
-            <aside className="hidden lg:block lg:w-56 lg:shrink-0">
-              <div className="sticky top-20">
-                <TableOfContents headings={headings} />
-              </div>
-            </aside>
-          )}
         </div>
       </div>
     </div>
