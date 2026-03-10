@@ -1,9 +1,9 @@
 ---
-title: Test 1
-lastUpdated: 2026-02-24
+title: TechStack
+lastUpdated: 2026-03-10
 ---
 
-- app.improvmx.com (programmatically managed email forwarding service)
+- Email Forwarding, programmatically managed, app.improvmx.com
 
 
 
