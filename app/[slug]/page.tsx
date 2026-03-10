@@ -94,14 +94,6 @@ export default async function ContentPage({
       <div className="mx-auto max-w-6xl px-6">
         <div className="py-6 lg:flex lg:gap-12">
           <main className="min-w-0 max-w-[680px] flex-1">
-            <nav className="mb-4 flex items-center gap-1.5 text-xs text-muted-foreground">
-              <Link href="/" className="hover:text-foreground transition-colors">
-                aictx
-              </Link>
-              <span>/</span>
-              <span className="text-foreground">{title}</span>
-            </nav>
-
             <header className="mb-8">
               <h1 className="font-serif text-3xl font-bold tracking-tight text-foreground">
                 {title}

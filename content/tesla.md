@@ -14,7 +14,3 @@ lastUpdated: 2026-02-24
 | Drive | RWD |
 | Steering | Standard wheel |
 | Range | ~350 km |
-
-## See also
-
-- [Test 1](/test1)
