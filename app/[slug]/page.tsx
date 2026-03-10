@@ -43,7 +43,7 @@ export function generateStaticParams() {
   if (!fs.existsSync(contentDir)) return []
   return fs
     .readdirSync(contentDir)
-    .filter((f) => f.endsWith(".md"))
+    .filter((f) => f.endsWith(".md") && f !== "home.md")
     .map((f) => ({ slug: f.replace(/\.md$/, "") }))
 }
 
