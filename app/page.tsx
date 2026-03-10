@@ -75,8 +75,8 @@ export default function Page() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="py-6">
           <main className="max-w-[680px]">
-            {/* Render home.md content if it exists */}
-            {result && (
+            {/* Render home.md content if it has body text */}
+            {result && result.content.trim() && (
               <article className="prose-article mb-8">
                 <MarkdownArticle content={result.content} />
               </article>
@@ -84,7 +84,6 @@ export default function Page() {
 
             {/* Auto-generated page index */}
             <section>
-              <h2 className="font-serif text-lg font-semibold mb-3 text-foreground">All pages</h2>
               <ul className="space-y-1.5">
                 {pages.map((p) => (
                   <li key={p.slug} className="flex items-baseline gap-2">
