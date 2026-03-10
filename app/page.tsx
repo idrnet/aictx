@@ -86,16 +86,13 @@ export default function Page() {
             <section>
               <ul className="space-y-1.5">
                 {pages.map((p) => (
-                  <li key={p.slug} className="flex items-baseline gap-2">
+                  <li key={p.slug}>
                     <Link
                       href={`/${p.slug}`}
                       className="text-sm text-foreground underline underline-offset-3 decoration-muted-foreground/50 hover:decoration-foreground transition-colors"
                     >
                       {p.title}
                     </Link>
-                    {p.lastUpdated && (
-                      <span className="text-xs text-muted-foreground">{p.lastUpdated}</span>
-                    )}
                   </li>
                 ))}
               </ul>
