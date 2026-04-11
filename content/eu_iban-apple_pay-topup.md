@@ -23,7 +23,14 @@ Since the 2025 EU Instant Payments Regulation, all EU banks offer instant SEPA a
 | Wise | BE 🇧🇪 | ⚠️ 1,5-2,5% always | Same | No limit | ❌ |
 | Monese | — | ❌ No CC top-up | — | — | ❌ |
 
-**Curve** is not a bank but an overlay card that routes any CC anywhere Mastercard is accepted — useful to top up neobanks indirectly.
+**Curve** is not a bank but an overlay card that routes any CC anywhere Mastercard is accepted. Key advantage: **masks the neobank destination from the card issuer**. If your CC issuer blocks direct neobank top-ups (e.g. WiZink → Revolut ❌), routing through Curve bypasses it (WiZink → Curve → Revolut ✅). Works with Apple Pay.
+
+## Issuer Compatibility (tested April 2026)
+
+| Issuer CC | Direct → Revolut | Direct → Vivid | Via Curve → any neobank |
+|-----------|-------------------|----------------|-------------------------|
+| CaixaBank Visa Vueling | ✅ | untested | ✅ |
+| WiZink | ❌ (499€ rejected) | untested direct | ✅ (2€ via Apple Pay) |
 
 ## bunq Cost Calculator
 
