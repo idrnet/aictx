@@ -34,8 +34,8 @@ EU neobanks with **free credit card top-up** + **free instant SEPA transfers**. 
 **Key findings:**
 - **Revolut CC → Vivid works** (999€ confirmed) but fails with bunq and Curve
 - **WiZink blocks direct neobank top-ups** but Curve bypasses it (for Vivid, not bunq)
-- **bunq rejects some issuers** — CaixaBank works, WiZink and Revolut CC don't
-- **bunq 500€/day hard limit** — after hitting it, next top-up rejected until next day
+- **Revolut CC is restrictive as a source** — only works with Vivid direct, fails with Curve and bunq
+- **bunq 500€/day hard limit** — after hitting it, rejects all top-ups until next day (any issuer)
 - Apple Pay / Google Pay top-ups count toward the same CC monthly limits
 
 ## bunq Fee Calculator
