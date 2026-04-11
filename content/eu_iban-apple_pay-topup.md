@@ -10,7 +10,7 @@ EU neobanks with **free credit card top-up** + **free instant SEPA transfers**. 
 
 | Bank | IBAN | Free CC/mo | Fee after | Max/mo | Apple Pay |
 |------|------|-----------|-----------|--------|-----------|
-| **Revolut** | LT 🇱🇹 | up to 5.000€ | Varies by plan | 5.000€ | ✅ |
+| **Revolut** | Multi (LT/GB/FR...) | up to 5.000€ | Varies by plan | 5.000€ | ✅ |
 | **bunq Free** | NL 🇳🇱 | 500€ | 0,5% | 2.000€ | ✅ |
 | **Vivid Standard** | DE 🇩🇪 | 200€ | 1% (min 0,49€) | 5.000€ | ✅ |
 | Vivid Plus (6,90€/mo) | DE 🇩🇪 | 500€ | 1% | 5.000€ | ✅ |
