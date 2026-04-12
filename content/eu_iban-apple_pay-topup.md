@@ -57,6 +57,22 @@ Stack free tiers: **Revolut** (~5.000€) + **bunq** (500€) + **Vivid** (200�
 
 Beyond that, bunq at 0,5% is cheapest (half of Vivid's 1%).
 
+## Deposit Guarantee
+
+All listed neobanks are covered by the **EU Deposit Guarantee Scheme (100.000€/person)**:
+
+| Bank | Licensed entity | Country | Regulator |
+|------|----------------|---------|-----------|
+| Revolut | Revolut Bank UAB | Lithuania | Bank of Lithuania |
+| bunq | bunq B.V. | Netherlands | DNB (De Nederlandsche Bank) |
+| Vivid | Solarisbank AG (Solaris SE) | Germany | BaFin |
+| N26 | N26 Bank GmbH | Germany | BaFin |
+| Wise | Licensed as EMI, not a bank | Belgium | NBB |
+
+Vivid is not a bank itself — it's a frontend/agent for **Solarisbank AG**, which holds the German banking licence. Your money is legally held at Solaris, fully covered by the German deposit guarantee (EdB).
+
+Wise is an Electronic Money Institution, **not covered** by deposit guarantee — funds are safeguarded but not insured.
+
 ## Sources
 
 [Vivid top-up](https://support.vivid.money/en/articles/8912320-what-s-an-instant-top-up) · [Vivid Prime](https://support.vivid.money/en/articles/8658613-what-s-vivid-prime) · [Vivid Plus](https://support.vivid.money/en/articles/10010274-what-s-vivid-plus) · [bunq limits](https://help.bunq.com/articles/what-are-the-limits-topping-up-using-your-card) · [bunq Free](https://help.bunq.com/articles/what-are-the-benefits-of-the-bunq-free-plan) · [NeoBank for EU Businesses](https://businessbank.idr.net)
