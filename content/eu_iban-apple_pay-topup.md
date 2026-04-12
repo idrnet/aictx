@@ -59,4 +59,4 @@ Beyond that, bunq at 0,5% is cheapest (half of Vivid's 1%).
 
 ## Sources
 
-[Vivid top-up](https://support.vivid.money/en/articles/8912320-what-s-an-instant-top-up) · [Vivid Prime](https://support.vivid.money/en/articles/8658613-what-s-vivid-prime) · [Vivid Plus](https://support.vivid.money/en/articles/10010274-what-s-vivid-plus) · [bunq limits](https://help.bunq.com/articles/what-are-the-limits-topping-up-using-your-card) · [bunq Free](https://help.bunq.com/articles/what-are-the-benefits-of-the-bunq-free-plan) · [Revolut Business referral](https://businessbank.idr.net)
+[Vivid top-up](https://support.vivid.money/en/articles/8912320-what-s-an-instant-top-up) · [Vivid Prime](https://support.vivid.money/en/articles/8658613-what-s-vivid-prime) · [Vivid Plus](https://support.vivid.money/en/articles/10010274-what-s-vivid-plus) · [bunq limits](https://help.bunq.com/articles/what-are-the-limits-topping-up-using-your-card) · [bunq Free](https://help.bunq.com/articles/what-are-the-benefits-of-the-bunq-free-plan) · [NeoBank for EU Businesses](https://businessbank.idr.net)
