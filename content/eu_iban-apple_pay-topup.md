@@ -29,12 +29,12 @@ EU neobanks with **free credit card top-up** + **free instant SEPA transfers**. 
 |-----------|-----------|--------|---------|-----------|
 | CaixaBank Visa Vueling | ✅ | ✅ 500€ (Apple Pay) | ✅ 1€ | ✅ |
 | WiZink | ❌ 499€ | ❌ 500€ | ? | ✅ Vivid 2€ / ❌ bunq |
-| Revolut CC (Visa) | N/A | ❌ | ✅ 999€ | ❌ (ping timeout) |
+| Revolut CC (Visa) | N/A | ❌ (permanent) | ✅ 999€ | ❌ (ping timeout) |
 
 **Key findings:**
 - **Revolut CC → Vivid works** (999€ confirmed) but fails with bunq and Curve
 - **WiZink blocks direct neobank top-ups** but Curve bypasses it (for Vivid, not bunq)
-- **Revolut CC is restrictive as a source** — only works with Vivid direct, fails with Curve and bunq
+- **Revolut CC is restrictive as a source** — only works with Vivid direct, permanently blocked by bunq and Curve
 - **bunq 500€/day hard limit** — after hitting it, rejects all top-ups until next day (any issuer)
 - Apple Pay / Google Pay top-ups count toward the same CC monthly limits
 
