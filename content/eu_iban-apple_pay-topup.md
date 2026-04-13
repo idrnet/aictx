@@ -28,14 +28,14 @@ EU neobanks with **free credit card top-up** + **free instant SEPA transfers**. 
 | Issuer CC | → Revolut | → bunq | → Vivid | Via Curve |
 |-----------|-----------|--------|---------|-----------|
 | CaixaBank Visa Vueling | ✅ 500€ | ✅ 500€ | ✅ | ✅ |
-| WiZink | ✅ 777€ | ✅ 60€ | ✅ 2€ (via Curve) | ✅ Vivid / ❌ bunq |
+| WiZink | ✅ 777€ | ✅ 60€ | ✅ 2€ (via Curve) | ✅ |
 | Revolut CC (Visa) | N/A | ✅ 440€ | ✅ 999€ | ❌ (ping timeout) |
 
 **Key findings:**
 - **WiZink → Revolut works** (777€ confirmed via Apple Pay). Earlier 499€ rejection was likely a temporary/daily limit, not a permanent block.
 - **Revolut CC → Vivid works** (999€ confirmed direct). Revolut CC → bunq works up to 440€ but rejected at 500€ (bunq daily limit, not issuer).
 - **bunq hard limit: 500€/day** — strictly enforced. Top-ups rejected once daily total reaches 500€, regardless of issuer. Split across multiple smaller top-ups to fill the daily quota (e.g. 60€ + 440€ = ✅).
-- **Curve limitation:** masks issuer from destination but some neobanks (bunq) still reject Curve-routed cards from certain issuers.
+- **Issuer anti-fraud whitelisting:** some CC issuers (e.g. WiZink) auto-block transactions to unfamiliar countries (NL, UK, LT). Call issuer to whitelist — WiZink allows 3-month country whitelisting. After whitelisting, all neobank top-ups work.
 - Apple Pay / Google Pay top-ups count toward the same CC monthly and daily limits.
 
 ## bunq Fee Calculator
