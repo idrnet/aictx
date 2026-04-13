@@ -1,23 +1,23 @@
 ---
 title: "EU IBAN + Credit Card Top-Up"
 description: "Neobank comparison: free CC top-up + instant SEPA. April 2026."
-lastUpdated: "2026-04-11"
+lastUpdated: "2026-04-13"
 ---
 
 EU neobanks with **free credit card top-up** + **free instant SEPA transfers**. Since the 2025 EU Instant Payments Regulation, all EU banks offer instant SEPA at no extra cost — the differentiator is **CC top-up cost**.
 
 ## Comparison
 
-| Bank | IBAN | Free CC/mo | Fee after | Max/mo | Apple Pay |
-|------|------|-----------|-----------|--------|-----------|
-| **Revolut** | Multi (LT/GB/FR...) | up to 5.000€ | Varies by plan | 5.000€ | ✅ |
-| **bunq Free** | NL 🇳🇱 | 500€ | 0,5% | 2.000€ | ✅ |
-| **Vivid Standard** | DE 🇩🇪 | 200€ | 1% (min 0,49€) | 5.000€ | ✅ |
-| Vivid Plus (6,90€/mo) | DE 🇩🇪 | 500€ | 1% | 5.000€ | ✅ |
-| Vivid Prime (9,90€/mo) | DE 🇩🇪 | 1.000€ | 1% | 5.000€ | ✅ |
-| N26 | DE 🇩🇪 | ⚠️ ~1,5% always | 1,5% | Varies | ✅ |
-| Wise | BE 🇧🇪 | ⚠️ 1,5-2,5% always | Same | No limit | ❌ |
-| Monese | — | ❌ No CC top-up | — | — | ❌ |
+| Bank | IBAN | Free CC/mo | Fee after | Max/mo | Daily limit | Apple Pay |
+|------|------|-----------|-----------|--------|-------------|-----------|
+| **Revolut** | Multi (LT/GB/FR...) | up to 5.000€ | Varies by plan | 5.000€ | — | ✅ |
+| **bunq Free** | NL 🇳🇱 | 500€ | 0,5% | 2.000€ | **500€/day** | ✅ |
+| **Vivid Standard** | DE 🇩🇪 | 200€ | 1% (min 0,49€) | 5.000€ | — | ✅ |
+| Vivid Plus (6,90€/mo) | DE 🇩🇪 | 500€ | 1% | 5.000€ | — | ✅ |
+| Vivid Prime (9,90€/mo) | DE 🇩🇪 | 1.000€ | 1% | 5.000€ | — | ✅ |
+| N26 | DE 🇩🇪 | ⚠️ ~1,5% always | 1,5% | Varies | — | ✅ |
+| Wise | BE 🇧🇪 | ⚠️ 1,5-2,5% always | Same | No limit | — | ❌ |
+| Monese | — | ❌ No CC top-up | — | — | — | ❌ |
 
 **Vivid paid plans never pay for themselves** — the plan fee exceeds the fee savings at any volume.
 
@@ -27,20 +27,20 @@ EU neobanks with **free credit card top-up** + **free instant SEPA transfers**. 
 
 | Issuer CC | → Revolut | → bunq | → Vivid | Via Curve |
 |-----------|-----------|--------|---------|-----------|
-| CaixaBank Visa Vueling | ✅ | ✅ 500€ (Apple Pay) | ✅ 1€ | ✅ |
-| WiZink | ❌ 499€ | ❌ 500€ | ? | ✅ Vivid 2€ / ❌ bunq |
-| Revolut CC (Visa) | N/A | ❌ (permanent) | ✅ 999€ | ❌ (ping timeout) |
+| CaixaBank Visa Vueling | ✅ 500€ | ✅ 500€ | ✅ | ✅ |
+| WiZink | ✅ 777€ | ✅ 60€ | ✅ 2€ (via Curve) | ✅ Vivid / ❌ bunq |
+| Revolut CC (Visa) | N/A | ✅ 440€ | ✅ 999€ | ❌ (ping timeout) |
 
 **Key findings:**
-- **Revolut CC → Vivid works** (999€ confirmed) but fails with bunq and Curve
-- **WiZink blocks direct neobank top-ups** but Curve bypasses it (for Vivid, not bunq)
-- **Revolut CC is restrictive as a source** — only works with Vivid direct, permanently blocked by bunq and Curve
-- **bunq 500€/day hard limit** — after hitting it, rejects all top-ups until next day (any issuer)
-- Apple Pay / Google Pay top-ups count toward the same CC monthly limits
+- **WiZink → Revolut works** (777€ confirmed via Apple Pay). Earlier 499€ rejection was likely a temporary/daily limit, not a permanent block.
+- **Revolut CC → Vivid works** (999€ confirmed direct). Revolut CC → bunq works up to 440€ but rejected at 500€ (bunq daily limit, not issuer).
+- **bunq hard limit: 500€/day** — strictly enforced. Top-ups rejected once daily total reaches 500€, regardless of issuer. Split across multiple smaller top-ups to fill the daily quota (e.g. 60€ + 440€ = ✅).
+- **Curve limitation:** masks issuer from destination but some neobanks (bunq) still reject Curve-routed cards from certain issuers.
+- Apple Pay / Google Pay top-ups count toward the same CC monthly and daily limits.
 
 ## bunq Fee Calculator
 
-0,5% flat on everything above 500€ free. Cap: 2.000€/month, 500€/day.
+0,5% flat on everything above 500€/mo free. Hard limits: **500€/day**, 2.000€/month.
 
 | Top-up/mo | Fee |
 |-----------|-----|
@@ -49,7 +49,7 @@ EU neobanks with **free credit card top-up** + **free instant SEPA transfers**. 
 | 1.500€ | **5,00€** |
 | 2.000€ | **7,50€** |
 
-New accounts (< 1 month): 1.200€/30d max, 500€/day.
+To reach 2.000€/month: top up 500€/day across 4 days. New accounts (< 1 month): max 1.200€/30d.
 
 ## Optimal Strategy
 
@@ -69,9 +69,9 @@ All listed neobanks are covered by the **EU Deposit Guarantee Scheme (100.000€
 | N26 | N26 Bank GmbH | Germany | BaFin |
 | Wise | Licensed as EMI, not a bank | Belgium | NBB |
 
-Vivid is not a bank itself — it's a frontend/agent for **Solarisbank AG**, which holds the German banking licence. Your money is legally held at Solaris, fully covered by the German deposit guarantee (EdB).
+Vivid is not a bank itself — it's a frontend/agent for **Solarisbank AG**, which holds the German banking licence. Funds legally held at Solaris, fully covered by the German deposit guarantee (EdB).
 
-Wise is an Electronic Money Institution, **not covered** by deposit guarantee — funds are safeguarded but not insured.
+Wise is an Electronic Money Institution — **not covered** by deposit guarantee. Funds are safeguarded but not insured.
 
 ## Sources
 
