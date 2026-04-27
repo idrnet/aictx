@@ -73,6 +73,18 @@ Vivid is not a bank itself — it's a frontend/agent for **Solarisbank AG**, whi
 
 Wise is an Electronic Money Institution — **not covered** by deposit guarantee. Funds are safeguarded but not insured.
 
+## Square POS Bank Account (EU)
+
+Square Spain requires an **ES IBAN** for merchant payouts — German/Dutch neobank IBANs are not accepted.
+
+**Where to change the linked bank account in Square Dashboard (EU layout):**
+
+Direct URL: [https://app.squareup.com/dashboard/balances/bank-accounts](https://app.squareup.com/dashboard/balances/bank-accounts)
+
+Hidden in the EU dashboard menu (not under Settings → Banking as US docs claim). The path Settings → Account & settings shows: Personal information / My business / Pricing / Payments / Money / Notifications / GDPR and fiscal compliance / etc — but **none of these contain bank accounts**. Use the direct URL above.
+
+Process: micro-deposit verification + email confirmation link (must click within 24h).
+
 ## Sources
 
 [Vivid top-up](https://support.vivid.money/en/articles/8912320-what-s-an-instant-top-up) · [Vivid Prime](https://support.vivid.money/en/articles/8658613-what-s-vivid-prime) · [Vivid Plus](https://support.vivid.money/en/articles/10010274-what-s-vivid-plus) · [bunq limits](https://help.bunq.com/articles/what-are-the-limits-topping-up-using-your-card) · [bunq Free](https://help.bunq.com/articles/what-are-the-benefits-of-the-bunq-free-plan) · [NeoBank for EU Businesses](https://businessbank.idr.net)
