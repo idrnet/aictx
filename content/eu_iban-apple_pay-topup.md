@@ -69,13 +69,13 @@ All listed neobanks are covered by the **EU Deposit Guarantee Scheme (100.000€
 | N26 | N26 Bank GmbH | Germany | BaFin |
 | Wise | Licensed as EMI, not a bank | Belgium | NBB |
 
+Note: Square (Spain merchant) accepts SEPA IBANs from any EU country, including German/Dutch/Lithuanian neobanks — name on the bank account must match the merchant entity registered with Square.
+
 Vivid is not a bank itself — it's a frontend/agent for **Solarisbank AG**, which holds the German banking licence. Funds legally held at Solaris, fully covered by the German deposit guarantee (EdB).
 
 Wise is an Electronic Money Institution — **not covered** by deposit guarantee. Funds are safeguarded but not insured.
 
 ## Square POS Bank Account (EU)
-
-Square Spain requires an **ES IBAN** for merchant payouts — German/Dutch neobank IBANs are not accepted.
 
 **Where to change the linked bank account in Square Dashboard (EU layout):**
 
